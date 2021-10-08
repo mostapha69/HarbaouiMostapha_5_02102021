@@ -29,6 +29,13 @@ fetch('http://localhost:3000/api/products/'+id)
 
     // baliseA.setAttribute('href','product.html?id='+product._id);
      section.appendChild(clone);
+
+     // Formatage du prix pour l'afficher en euros
+     product.price = product.price / 100;
+     balisePPRIX.innerText = new Intl.NumberFormat("fr-FR", {
+       style: "currency",
+       currency: "EUR",
+     }).format(product.price);
       
 })
 
