@@ -46,22 +46,18 @@ fetch('http://localhost:3000/api/products/'+id)
     console.log(btnEnvoyerPanier);
 
    //  Ecouter le bouton et envoyer le panier
-//    btnEnvoyerPanier.addEventlistener("click",onClick); 
-//    function onClick(e) {
-//      e.preventDefault();
-//      console.log(e);
-//      let productAdded = {
-//          name: product.name,
-//          price: product.price,
-         
-//      }
-//      console.log(productAdded)
-   
-//  }  
+   btnEnvoyerPanier.addEventListener("click",function(e){
+    e.preventDefault();
+    let productAdded = {
+        name: product.name,
+        price: product.price,
+    }  
+    console.log(productAdded)  
+   }); 
 
  section.appendChild(clone);
-    
-})
+})  
+
   
 // }
 // section.appendChild(clone);
