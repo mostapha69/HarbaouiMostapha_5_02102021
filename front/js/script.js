@@ -13,13 +13,14 @@ fetch('http://localhost:3000/api/products')
 
 .catch (function(e){
     // Rejet de la promesse (si port: 3000 n'est pas ouvert)
-    let baliseTitles = document.querySelector('.titles')
-    baliseTitles.textContent = "Nous n'avons pas pu afficher vos produits!  Votre port 3000 est-il bien ouvert?"
+    
+    let baliseSection = document.querySelector('.item')
+    baliseSection.textContent = "Nous n'avons pas pu afficher vos produits!  Votre port 3000 est-il bien ouvert?"
      console.log(e);
-     baliseTitles.style.textAlign = "center";
-     baliseTitles.style.fontSize = "x-large";
-     baliseTitles.style.color = "red"; 
-     baliseTitles.style.fontweight = "bold";
+     baliseSection.style.textAlign = "center";
+     baliseSection.style.fontSize = "x-large";
+     baliseSection.style.color = "white"; 
+     baliseSection.style.fontweight = "bold";
 
 })
 
